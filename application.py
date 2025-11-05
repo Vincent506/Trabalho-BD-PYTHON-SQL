@@ -7,3 +7,4 @@ datab.criar_tabela()
 
 def salvar_anime(titulo, ano, nota):
     datab.inserir_anime(titulo,ano,nota)
+    

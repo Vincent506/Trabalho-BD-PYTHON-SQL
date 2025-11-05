@@ -1,7 +1,7 @@
 import  sqlite3
 
 def criar_conexao():
-    conexao = sqlite3.connect('hqs.db')
+    conexao = sqlite3.connect('anime.db')
     return conexao
 
 def criar_tabela():
