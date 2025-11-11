@@ -152,3 +152,21 @@ def inserir_user(username, pasword):
     conexao.commit()
     conexao.close()
     print('Usuario cadastrado com sucesso')
+
+
+
+def checar_usuario(username_input, password_input):
+    conexao = criar_conexao()
+    cursor = conexao.cursor()
+
+    # pega todos os usuários (exemplo apenas para mostrar uso do for)
+    cursor.execute("SELECT username, pasword FROM usuario")
+    rows = cursor.fetchall()
+
+    for row in rows:
+        db_username, db_password = row
+        if db_username == username_input and db_password == password_input:
+            conexao.close()
+            return True
+    conexao.close()
+    return False
