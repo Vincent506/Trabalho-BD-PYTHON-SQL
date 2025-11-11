@@ -2,4 +2,4 @@
 set -e
 # ativa venv local (usuário cria venv local)
 source venv/bin/activate || true
-python -m src.application
+python -m src.app.py
