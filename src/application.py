@@ -2,6 +2,7 @@ import streamlit as st
 from datb_anime import datab
 from datetime import date
 
+
 teste = datab.listar_animes()
 
 if not teste:
