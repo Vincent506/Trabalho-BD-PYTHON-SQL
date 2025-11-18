@@ -139,14 +139,14 @@ def listar_tabela_user():
     return usuarios
 
 # cadastra um novo usuario no banco de dados
-def inserir_user(username, pasword):
+def inserir_user(name, pas):
     conexao = criar_conexao()
     cursor = conexao.cursor()
 
     cursor.execute(
-        """ INSERT INTO usuario (username, pasword)
-        VALUES (?,?);"""
-        (username, pasword)
+        """ INSERT INTO usuario (username, pasword) 
+        VALUES(?, ?);""",
+        (name, pas)
     )
 
     conexao.commit()
